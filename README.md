@@ -32,4 +32,3 @@ npm install
 5. `node index.mjs` to run the scraping and uploading tool
 
 6. `stats.mjs` to run the summary tool
-``` to print stats
