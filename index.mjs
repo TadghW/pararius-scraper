@@ -3,14 +3,7 @@ import config from './config.mjs';
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBVgDM4id8HpNCf3a9ow6EAd15sNJJ5KV4",
-  authDomain: "property-scrape-e0ac1.firebaseapp.com",
-  projectId: "property-scrape-e0ac1",
-  storageBucket: "property-scrape-e0ac1.appspot.com",
-  messagingSenderId: "18166764100",
-  appId: "1:18166764100:web:e04560913c6d956df9e211"
-};
+const firebaseConfig = require('./firebaseConfig.json');
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
