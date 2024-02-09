@@ -1,8 +1,8 @@
 # Pararius Scraper
 
-index.mjs => Puppeteer scraper grabs the front page of Pararius results within my parameters and uploads key information from them to a Firestore database. 
+`index.mjs` => Puppeteer scraper grabs the front page of Pararius results within my parameters and uploads key information from them to a Firestore database. 
 
-stats.mjs => Snapshots the db and calculates some basic metrics of each of the areas I collect information on
+`stats.mjs` => Snapshots the db and calculates some basic metrics of each of the areas I collect information on
 
 ## Getting Started
 
@@ -29,10 +29,7 @@ npm install
 
 4. **Set configuration details in config.mjs as you see fit**
 
-5. ```bash
-   node index.mjs
-``` to run the scraping and uploading tool
+5. `node index.mjs` to run the scraping and uploading tool
 
-6. ```bash
-  node stats.mjs
+6. `stats.mjs` to run the summary tool
 ``` to print stats
