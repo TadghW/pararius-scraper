@@ -1,0 +1,15 @@
+{
+  "name": "property-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tadgh-wagstaff",
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^10.8.0",
+    "puppeteer": "^22.0.0"
+  }
+}
