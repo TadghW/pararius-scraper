@@ -1,4 +1,4 @@
-# Project Title
+# Pararius Scraper
 
 index.mjs => Puppeteer scraper grabs the front page of Pararius results within my parameters and uploads key information from them to a Firestore database. 
 
@@ -28,3 +28,11 @@ npm install
 3. **Populate a firebaseConfig.json with your firebase config info**
 
 4. **Set configuration details in config.mjs as you see fit**
+
+5. ```bash
+   node index.mjs
+``` to run the scraping and uploading tool
+
+6. ```bash
+  node stats.mjs
+``` to print stats
