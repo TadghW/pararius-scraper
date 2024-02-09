@@ -2,8 +2,8 @@ import puppeteer from 'puppeteer';
 import config from './config.mjs';
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";
+import firebaseConfig from './firebaseConfig.json' assert { type: 'json' };
 
-const firebaseConfig = require('./firebaseConfig.json');
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);

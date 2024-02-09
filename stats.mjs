@@ -1,8 +1,7 @@
 import config from './config.mjs';
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
-
-const firebaseConfig = require('./firebaseConfig.json');
+import firebaseConfig from './firebaseConfig.json' assert { type: 'json' };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
