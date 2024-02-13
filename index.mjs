@@ -28,9 +28,9 @@ async function scrapePararius() {
 
   let results = [];
 
-  for (let location of config.dutch_targets) {
+  for (let location of config.targets) {
     
-    const parariusSearch = `https://www.pararius.com/apartments/${location}/0-2400/${config.bed}-bedrooms/upholstered/${config.sqm}m2/indefinite`;
+    const parariusSearch = `https://www.pararius.com/apartments/${location.name}/${config.lowerLimit}-${config.upperLimit}/${config.bed}-bedrooms/${config.sqm}m2/indefinite`;
     
     try {
 
@@ -40,22 +40,22 @@ async function scrapePararius() {
 
       let links = await getPListings(page, parariusSearch)
 
-      console.log(`All listings => ${JSON.stringify(links)}`)
-
       for(let i = 0; i < links.length; i++){
         console.log(`Hitting ${links[i].title} @ ${links[i].link}...`)
+        const locationIsolator = /^(?:[^/]*\/){4}([^/]*)/;
         await page.goto(links[i].link, { waitUntil: 'networkidle2' });
         let listingInfo = {
           "title": links[i].title,
-          "area": location,
+          "area": links[i].link.match(locationIsolator)[1],
           "link": links[i].link,
         }
+
         let info = await page.evaluate(() => {
           const price = document.querySelector('div.listing-detail-summary__price').innerText;
           const floorspace = document.querySelector('li.illustrated-features__item--surface-area').innerText;
           const bedrooms = document.querySelector('dd.listing-features__description--number_of_bedrooms span').innerText;
-          const garden = document.querySelector('dd.listing-features__description--garden span').innerText;
-          const balcony = document.querySelector('dd.listing-features__description--balcony span').innerText;
+          const garden = document.querySelector('dd.listing-features__description--garden span')?.innerText;
+          const balcony = document.querySelector('dd.listing-features__description--balcony span')?.innerText;
           const pets = document.querySelector('dd.listing-features__description--pets_allowed span')?.innerText;
           const lat = document.querySelector('wc-detail-map').getAttribute('data-latitude');
           const long = document.querySelector('wc-detail-map').getAttribute('data-longitude')
@@ -74,7 +74,6 @@ async function scrapePararius() {
         results.push(listingInfo)
       }
 
-      console.log(results);
     } catch (error) {
       console.error(`Error getting pararius results for ${location}: ${error.message}`);
     }
@@ -124,7 +123,6 @@ async function getPListings(page, parariusSearch) {
       let elements = document.querySelectorAll('.listing-search-item');
       console.log(`Listings found: ${elements.length}`);
       document.querySelectorAll('section.listing-search-item').forEach((element) => {
-        console.log('Checking listing...');
         const titleElement = element.querySelector('.listing-search-item__price').previousElementSibling;
         const title = titleElement ? titleElement.innerText : 'No title';
         const linkElement = element.querySelector('.listing-search-item__link--title');

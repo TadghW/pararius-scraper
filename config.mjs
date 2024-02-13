@@ -1,64 +1,61 @@
-const dutch_targets = [
-    'den-haag',
-    'rotterdam',
-    'amsterdam',
-    'utrecht',
-    'breda',
-    'delft',
-    'gouda',
-    'leiden',
-    'haarlem',
-    'amersfoort',
-    'hilversum',
-    'zoetermeer',
-    'aplhen-aan-den-rijn',
-    'woerden',
-    'hoofddorp',
-    'zaandam',
-    'beverwijk',
-    'almere',
-    'zeist',
-    'nieuwegein'
-]
-
-const french_targets = [
-    'paris',
-    'noisy-le-grand',
-    'villeparisis',
-    'massy',
-    'antony',
-    'versailles',
-    'chatou',
-    'le-port-marly',
-    'argenteuil',
-    'franconville',
-    'saint-denis',
-    'sant-germain-en-laye',
-    'melun',
-    'cesson',
-    'meaux',
-    'pontoise',
-    'cergy',
-    'plaisir',
-    'coignieres',
-    'lyon',
-    'saint-priest',
-    'villefontaine',
-    'st-genis-laval',
-    'vienne',
-    'saint-etienne'
+const targets = [
+    {name: 'beverwijk', population: 41863},
+    {name: 'rotterdam', population: 1273385},
+    {name: 'amsterdam', population: 1459402},
+    {name: 'den-haag', population: 883720},
+    {name: 'utrecht', population: 656342},
+    {name: 'breda', population: 553706},
+    {name: 'haarlem', population: 420337},
+    {name: 'leiden', population: 344299},
+    {name: 'amersfoort', population: 287110},
+    {name: 'almere', population: 214715},
+    {name: 'zoetermeer', population: 125267},
+    {name: 'alphen-aan-den-rijn', population: 112587},
+    {name: 'delft', population: 103581},
+    {name: 'amstelveen', population: 90829},
+    {name: 'hilversum', population: 90261},
+    {name: 'hoofddorp', population: 77885},
+    {name: 'zaandam', population: 76804},
+    {name: 'gouda', population: 73681},
+    {name: 'capelle-aan-den-ijssel', population: 67319},
+    {name: 'katwijk', population: 65929},
+    {name: 'nieuwegein', population: 63886},
+    {name: 'rijswijk', population: 55220},
+    {name: 'woerden', population: 52694},
+    {name: 'zeist', population: 51385},
+    {name: 'soest', population: 49606},
+    {name: 'nieuw-vennep', population: 31415},
+    {name: 'baarn', population: 24792},
+    {name: 'hillegom', population: 22197},
+    {name: 'achterveld-ut', population: 2625},
+    {name: 'abcoude', population: 8657},
+    {name: 'berkel-en-rodenrijs', population: 8657},
 ]
 
 const radius = 5
 
 const sqm = 90
 
-const bed = 3
+const bed = 2
+
+const lowerLimit = 1200
+
+const upperLimit = 2400
+
+const minListings = 1
+
+const minPopulation = 10000
+
+const maxCommute = 30
 
 export default {
-    dutch_targets,
-    french_targets,
+    targets,
     radius,
     sqm,
-    bed
+    bed,
+    lowerLimit,
+    upperLimit,
+    minListings,
+    minPopulation,
+    maxCommute
 }
