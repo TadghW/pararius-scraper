@@ -6,6 +6,7 @@ const targets = [
     {name: 'utrecht', population: 656342},
     {name: 'breda', population: 553706},
     {name: 'haarlem', population: 420337},
+    {name: 'arnhem', population: 361048},
     {name: 'leiden', population: 344299},
     {name: 'amersfoort', population: 287110},
     {name: 'almere', population: 214715},
@@ -24,12 +25,16 @@ const targets = [
     {name: 'woerden', population: 52694},
     {name: 'zeist', population: 51385},
     {name: 'soest', population: 49606},
+    {name: 'voorburg', population: 39000},
     {name: 'nieuw-vennep', population: 31415},
     {name: 'baarn', population: 24792},
+    {name: 'lisse', population: 22982},
     {name: 'hillegom', population: 22197},
-    {name: 'achterveld-ut', population: 2625},
+    {name: 'lunteren', population: 13775},
     {name: 'abcoude', population: 8657},
     {name: 'berkel-en-rodenrijs', population: 8657},
+    {name: 'zaandijk', population: 8600},
+    {name: 'achterveld-ut', population: 2625},
 ]
 
 const radius = 5

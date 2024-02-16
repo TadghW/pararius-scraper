@@ -40,6 +40,7 @@ const areasByListings = Object.keys(listingsByArea).map(area => {
   }).sort((a, b) => b.listings - a.listings);
 
   const areasByPopToListing = Object.keys(listingsByArea).map(area => {
+    console.log(`area => ${area}`)
     const listings = listingsByArea[area].length;
     const target = config.targets.find(target => target.name === area);
     const pop = target.population;
