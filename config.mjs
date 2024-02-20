@@ -1,12 +1,15 @@
 const targets = [
-    {name: 'beverwijk', population: 41863},
-    {name: 'rotterdam', population: 1273385},
+    {name: 'achterveld-ut', population: 2625}, //Sacrificial lamb, I have no idea why the first navigation breaks browser context
     {name: 'amsterdam', population: 1459402},
+    {name: 'rotterdam', population: 1273385},
     {name: 'den-haag', population: 883720},
+    {name: 'eindhoven', population: 780611},
     {name: 'utrecht', population: 656342},
     {name: 'breda', population: 553706},
+    {name: 'tilburg', population: 553706},
     {name: 'haarlem', population: 420337},
     {name: 'arnhem', population: 361048},
+    {name: 'den-bosch', population: 355230},
     {name: 'leiden', population: 344299},
     {name: 'amersfoort', population: 287110},
     {name: 'almere', population: 214715},
@@ -25,8 +28,10 @@ const targets = [
     {name: 'woerden', population: 52694},
     {name: 'zeist', population: 51385},
     {name: 'soest', population: 49606},
+    {name: 'beverwijk', population: 41863},
     {name: 'voorburg', population: 39000},
     {name: 'nieuw-vennep', population: 31415},
+    {name: 'uithoorn', population: 30206},
     {name: 'baarn', population: 24792},
     {name: 'lisse', population: 22982},
     {name: 'hillegom', population: 22197},
@@ -34,7 +39,6 @@ const targets = [
     {name: 'abcoude', population: 8657},
     {name: 'berkel-en-rodenrijs', population: 8657},
     {name: 'zaandijk', population: 8600},
-    {name: 'achterveld-ut', population: 2625},
 ]
 
 const radius = 5
@@ -47,9 +51,9 @@ const lowerLimit = 1200
 
 const upperLimit = 2400
 
-const minListings = 1
+const minListings = 2
 
-const minPopulation = 10000
+const minPopulation = 50000
 
 const maxCommute = 30
 

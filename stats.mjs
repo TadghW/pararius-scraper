@@ -62,25 +62,25 @@ console.log(`Gating areas by minimum ${config.minListings} listings, minimum ${c
 const gatedAreasByPrice = areasByAveragePrice.filter(area => {
   const target = config.targets.find(target => target.name === area.area);
   const areaListings = listingsByArea[area.area];
-  return target.population > config.minPopulation && areaListings.length > config.minListings;
+  return target.population >= config.minPopulation && areaListings.length >= config.minListings;
 });
 
 const gatedAreasBySqm = areasByAveragePriceSqm.filter(area => {
   const target = config.targets.find(target => target.name === area.area);
   const areaListings = listingsByArea[area.area];
-  return target.population > config.minPopulation && areaListings.length > config.minListings;
+  return target.population >= config.minPopulation && areaListings.length >= config.minListings;
 });
 
 const gatedAreasByListings = areasByListings.filter(area => {
   const target = config.targets.find(target => target.name === area.area);
   const areaListings = listingsByArea[area.area];
-  return target.population > config.minPopulation && areaListings.length > config.minListings;
+  return target.population >= config.minPopulation && areaListings.length >= config.minListings;
 });
 
 const gatedAreasByPopToListing = areasByPopToListing.filter(area => {
   const target = config.targets.find(target => target.name === area.area);
   const areaListings = listingsByArea[area.area];
-  return target.population > config.minPopulation && areaListings.length > config.minListings;
+  return target.population >= config.minPopulation && areaListings.length >= config.minListings;
 });
 
   console.log(`Areas by average price =>`)
