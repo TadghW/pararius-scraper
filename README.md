@@ -1,8 +1,8 @@
 # Pararius Scraper
 
-`index.mjs` => Puppeteer scraper grabs the front page of Pararius results within my parameters and uploads key information from them to a Firestore database. 
+`index.mjs` => Puppeteer scrapes the most recent page of Pararius results that fit within your parameters, uploads information of any not already in your Firestore database to it. 
 
-`stats.mjs` => Snapshots the db and calculates some basic metrics of each of the areas I collect information on
+`stats.mjs` => Breaks down the rental market by area based on the information inside your Firestore database.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ If you want to run this you'll need:
 - Node.js
 - npm or yarn
 - Google Cloud account
-- Firebase project with Firestore configured for access with schema and collection referenced in index.mjs
+- Firebase project with Firestore configured for access with schema and collection demonstrated in index.mjs
 
 ### Installing
 
