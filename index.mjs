@@ -124,7 +124,12 @@ let activeListings = await findAllRelevantListings(page)
 
 console.log(`Found ${activeListings.length} active listings.`)
 
-let newProperties = activeListings.filter((listing) => !existingProperties.some(property => property.title === listing.title));
+const propertiesSeen = new Set();
+let newProperties = activeListings.filter((listing) => {if(propertiesSeen.has(listing.title)){return false}else{propertiesSeen.add(listing.title); return true}})
+
+console.log(`Accounting for duplicates by search are that's ${newProperties.length} listings`)
+
+newProperties = activeListings.filter((listing) => !existingProperties.some(property => property.title === listing.title));
 
 console.log(`${newProperties.length} of these listings aren't present in the database`)
 

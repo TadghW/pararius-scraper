@@ -30,6 +30,7 @@ const targets = [
     {name: 'soest', population: 49606},
     {name: 'beverwijk', population: 41863},
     {name: 'voorburg', population: 39000},
+    {name: 'ijsselstein', population: 33819},
     {name: 'nieuw-vennep', population: 31415},
     {name: 'uithoorn', population: 30206},
     {name: 'baarn', population: 24792},
