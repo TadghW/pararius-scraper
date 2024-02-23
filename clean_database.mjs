@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, query, getDocs, deleteDoc, where, doc } from "firebase/firestore";
+import { getFirestore, collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import firebaseConfig from './firebaseConfig.json' assert { type: 'json' };
 
 const app = initializeApp(firebaseConfig);
