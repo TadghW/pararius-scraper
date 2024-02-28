@@ -1,5 +1,5 @@
 const targets = [
-    {name: 'achterveld-ut', population: 2625}, //Sacrificial lamb, I have no idea why the first navigation breaks browser context
+    {name: 'achterveld-ut', population: 2625}, //Sacrificial lamb, I have no idea why the first navigation sometimes breaks browser context
     {name: 'amsterdam', population: 1459402},
     {name: 'rotterdam', population: 1273385},
     {name: 'den-haag', population: 883720},
@@ -11,13 +11,16 @@ const targets = [
     {name: 'arnhem', population: 361048},
     {name: 'den-bosch', population: 355230},
     {name: 'leiden', population: 344299},
+    {name: 'nijmegen', population: 287517},
     {name: 'amersfoort', population: 287110},
     {name: 'almere', population: 214715},
+    {name: 'apeldoorn', population: 213899},
     {name: 'zoetermeer', population: 125267},
     {name: 'alphen-aan-den-rijn', population: 112587},
     {name: 'delft', population: 103581},
     {name: 'amstelveen', population: 90829},
     {name: 'hilversum', population: 90261},
+    {name: 'schiedam', population: 79279},
     {name: 'hoofddorp', population: 77885},
     {name: 'zaandam', population: 76804},
     {name: 'gouda', population: 73681},
@@ -33,13 +36,16 @@ const targets = [
     {name: 'ijsselstein', population: 33819},
     {name: 'nieuw-vennep', population: 31415},
     {name: 'uithoorn', population: 30206},
+    {name: 'voorschoten', population: 25650},
     {name: 'baarn', population: 24792},
     {name: 'lisse', population: 22982},
+    {name: 'zeewolde', population: 22879},
     {name: 'hillegom', population: 22197},
     {name: 'lunteren', population: 13775},
     {name: 'abcoude', population: 8657},
     {name: 'berkel-en-rodenrijs', population: 8657},
     {name: 'zaandijk', population: 8600},
+    {name: 'vleuten', population: 6915},
 ]
 
 const radius = 5
